@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Minutes {
+    public static void main(String[] args)
+    {
+        int min, days, years, hrs;
+        System.out.println("Enter the number of minutes you want to convert: ");
+        Scanner sc= new Scanner(System.in);
+        min = sc.nextInt();
+        hrs= min/60;
+        days= hrs/24;
+        years= days/364;
+        System.out.println(+min+" minutes is approximately "+days+" days and "+years+" years.");
+        
+        
+    }
+}
