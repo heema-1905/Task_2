@@ -1,0 +1,167 @@
+//Addition of matrices
+import java.util.Scanner;
+/**
+ *
+ * @author hp
+ */
+public class AddMatrix {
+    int a[][] = new int[3][3];
+    int b[][] = new int[3][3];
+    int c[][] = new int[3][3];
+    int i,j,k,l,m,n;
+    Scanner sc= new Scanner(System.in);
+    void getMatrix()
+    {
+       
+        System.out.println("Enter the first matrix elements: ");
+        for(i=0; i<a.length; i++)
+        {
+            for(j=0; j<a.length; j++)
+            {
+                a[i][j]= sc.nextInt();
+                
+            }
+            
+        }
+        System.out.println("Enter the second matrix elements: ");
+        for(k=0; k<b.length; k++)
+        {
+            for(l=0; l<b.length; l++)
+            {
+                b[k][l]= sc.nextInt();
+                
+            }
+            
+        }
+    }
+    void displayMatrix()
+    {
+        System.out.println("You entered: ");
+        System.out.println("First matrix is: ");
+        for(i=0; i<a.length; i++)
+        {
+            for(j=0; j<a.length; j++)
+            {
+                System.out.print(a[i][j]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println("Second matrix: ");
+        for(k=0; k<b.length; k++)
+        {
+            for(l=0; l<b.length; l++)
+            {
+                System.out.print(b[k][l]+" ");
+            }
+            System.out.println();
+        }
+    
+    
+        System.out.println("The addition of two matrices is: ");
+        for(m=0; m<c.length; m++)
+        {
+            for(n=0; n<c.length; n++)
+            {
+                c[m][n]= a[m][n]+ b[m][n];
+                System.out.print(c[m][n]+" ");
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args)
+    {
+        AddMatrix d= new AddMatrix();
+        d.getMatrix();
+        d.displayMatrix();
+        
+    }
+    
+}
+//Multiplication of matrices
+import java.util.Scanner;
+/**
+ *
+ * @author hp
+ */
+public class MultMatrix {
+    private int a[][] = new int[3][3];
+    private int b[][] = new int[3][3];
+    private int c[][] = new int[3][3];
+    int i,j,k,l,m,n,p;
+    Scanner sc= new Scanner(System.in);
+    void getMatrix()
+    {
+       
+        System.out.println("Enter the first matrix elements: ");
+        for(i=0; i<a.length; i++)
+        {
+            for(j=0; j<a.length; j++)
+            {
+                a[i][j]= sc.nextInt();
+                
+            }
+            
+        }
+        System.out.println("Enter the second matrix elements: ");
+        for(k=0; k<b.length; k++)
+        {
+            for(l=0; l<b.length; l++)
+            {
+                b[k][l]= sc.nextInt();
+                
+            }
+            
+        }
+    }
+    void displayMatrix()
+    {
+        System.out.println("You entered: ");
+        System.out.println("First matrix is: ");
+        for(i=0; i<a.length; i++)
+        {
+            for(j=0; j<a.length; j++)
+            {
+                System.out.print(a[i][j]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println("Second matrix: ");
+        for(k=0; k<b.length; k++)
+        {
+            for(l=0; l<b.length; l++)
+            {
+                System.out.print(b[k][l]+" ");
+            }
+            System.out.println();
+        }
+    
+    } 
+    void multMatrix()
+    {
+        int sum=0;
+        System.out.println("The multiplication of numbers is: ");
+        for(m=0; m<c.length; m++)
+        {
+            for(n=0; n<c.length; n++)
+            {
+                for(k=0; k<c.length; k++)
+                {
+                    sum= sum+ (a[n][k]*b[k][n]);
+                }
+                c[m][n]= sum;
+                System.out.print(c[m][n]+" ");
+                sum=0;
+            }
+            System.out.println();
+            
+        }
+    }
+    public static void main(String[] args)
+    {
+        MultMatrix x= new MultMatrix();
+        x.getMatrix();
+        x.displayMatrix();
+        x.multMatrix();
+    }
+    
+}
